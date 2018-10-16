@@ -5,8 +5,7 @@ app.config['DEBUG'] = True
 
 @app.route("/")
 def index():
-    return "<h1>"+"Hello Flask"+"</h1>" + "</br>" +
-            "<p> A revisit of how to install and run a flask app.</p>" +
-            "<p> This exercise was extremely educational." 
+    return "<h1>"+"Hello Flask"+"</h1><p>"+"Revisit and successful test of installation and setup of flask environment"+"</p>"
+    
 
 app.run()
