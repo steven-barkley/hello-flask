@@ -15,13 +15,29 @@ form = """
             <input id="first-name" type="text" name="first_name" />
             <input type="submit" />
         </form>
+        <a href="/next">What's next?</a>
     </body>
 </html>
 """
 
+docuNext = """
+<!doctype html>
+<html>
+    <head>
+        <title>What's coming next?</title>
+    </head>
+    <body>
+        <p>Next I will attempt to integrate a templating engine. Wish me luck please.</p>
+    </body>
+</html>"""
+
 @app.route("/")
 def index():
     return form
+
+@app.route("/next", methods=['GET'])
+def next():
+    return docuNext    
 
 @app.route("/hello", methods=['POST'])
 def hello():
